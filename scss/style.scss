@@ -1,0 +1,192 @@
+@import "foundation";
+
+
+body
+{
+  @include background-image(radial-gradient(45px 45px, #acc6d1 100px, #89a9b8  400px));
+}
+
+.container
+{
+  padding:40px;
+
+  @media #{$large}{
+    max-width:1200px;
+    margin:0 auto !important;
+  }
+}
+
+header
+{
+  padding:40px 20px;
+  @include border-top-left-radius($global-radius);
+  @include border-top-right-radius($global-radius);
+  @include box-shadow(rgba(0,0,0, 0.2) 0px 0px 20px);
+  background:
+  {
+    color:#dadfe4;
+  }
+}
+
+.top-bar{
+  ul{
+
+  }
+  .title-area
+  {
+    margin-right:60px !important;
+  }
+}
+
+.homeHero
+{
+  text-align: center;
+  margin:300px auto;
+  p{
+    color:$color-homep;
+    font:{
+      size:emCalc(25px);
+    }
+  }
+  .button{
+    background:transparent;
+    border:{
+      color:#fff;
+    }
+  }
+}
+
+.channelHero
+{
+  text-align: center;
+  margin:300px auto;
+  p{
+    color:$color-homep;
+    font:{
+      size:emCalc(25px);
+    }
+  }
+  .button{
+    background:transparent;
+    border:{
+      color:#fff;
+    }
+  }
+}
+
+.content{
+  padding:{
+    top:20px;
+    bottom:20px;
+  }
+  background:$color-contentBg;
+  @include box-shadow(rgba(0,0,0, 0.2) 0px 0px 20px);
+  h3{
+    font:{
+      family:$headerFont;
+      weight:700;
+      size:emCalc(22px);
+    }
+    color:#6f6f6f;
+    line-height: 1.5em;
+    margin-bottom:20px !important;
+  }
+  p{
+    font: {
+      family:$bodyFont;
+      size:emCalc(20px);
+    }
+    line-height: 2em;
+    margin-bottom:50px !important;
+  }
+  blockquote{
+    font:{
+      family:$headerFont;
+      weight:700;
+      size:emCalc(25px);
+    }
+    line-height: 1.5em;
+    margin-bottom:50px !important;
+  }
+
+}
+
+.centerAlign
+{
+  display: table;
+  height: 100%;
+  position: relative;
+    .alignMiddle
+    {
+      display: table-cell;
+      vertical-align: middle;
+          position: absolute;
+    }
+}
+
+.footer{
+  @include border-bottom-left-radius($global-radius);
+  @include border-bottom-right-radius($global-radius);
+  @include box-shadow(rgba(0,0,0, 0.2) 0px 0px 20px);
+  padding-top:40px !important;
+  padding-bottom:20px !important;
+  background:{
+    color:$color-footerbg;
+  }
+  h2{
+    margin-bottom:15px !important;
+    font:{
+      size:emCalc(14px);
+      weight:700;
+    }
+    @media #{$screen}
+    {
+      border-bottom:1px #2e2e2e solid;
+      padding-bottom:15px;
+      margin-bottom:15px;
+    }
+    @media #{$small}{
+      border:none;
+      padding-bottom:inherit;
+      margin-bottom:inherit;
+    }
+  }
+
+  .blogPosts
+  {
+    @media #{$screen}
+    {
+      display:none;
+    }
+    @media #{$small}{
+      display:inherit;
+    }
+  }
+  p
+  {
+    font:
+    {
+      size:emCalc(15px);
+    }
+    margin-bottom:15px;
+  }
+
+  .div{
+    border-bottom:1px #2e2e2e solid;
+    margin-bottom:15px;
+  }
+  .no-bullet{
+    margin:0;
+    li{
+      margin-bottom:7px;
+      text-transform: uppercase;
+      font-size:emCalc(13px) !important;
+    }
+    @media #{$screen}{
+      display:none;
+    }
+    @media #{$small}{
+      display:inherit;
+    }
+  }
+}
